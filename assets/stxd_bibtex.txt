@@ -1,0 +1,8 @@
+@inproceedings{
+jang2023stxd,
+title={{STXD}: Structural and Temporal Cross-Modal Distillation for Multi-View 3D Object Detection},
+author={Sujin Jang and Dae Ung Jo and Sung Ju Hwang and Dongwook Lee and Daehyun Ji},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+year={2023},
+url={https://openreview.net/forum?id=Grz2ijKrWI}
+}

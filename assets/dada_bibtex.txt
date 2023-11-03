@@ -1,0 +1,8 @@
+@inproceedings{
+jang2022dada,
+title={Da{DA}: Distortion-aware Domain Adaptation for Unsupervised Semantic Segmentation},
+author={Sujin Jang and Joohan Na and Dokwan Oh},
+booktitle={Thirty-sixth Conference on Neural Information Processing Systems},
+year={2022},
+url={https://openreview.net/forum?id=6RoAxmwj0L2}
+}
