@@ -1,0 +1,7 @@
+@inproceedings{choi2015collaborative,
+  title={A collaborative filtering approach to real-time hand pose estimation},
+  author={Choi, Chiho and Sinha, Ayan and Choi, Joon Hee and Jang, Sujin and Ramani, Karthik},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={2336--2344},
+  year={2015}
+}

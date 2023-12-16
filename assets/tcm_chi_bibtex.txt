@@ -1,0 +1,7 @@
+@inproceedings{jang2017modeling,
+  title={Modeling cumulative arm fatigue in mid-air interaction based on perceived exertion and kinetics of arm motion},
+  author={Jang, Sujin and Stuerzlinger, Wolfgang and Ambike, Satyajit and Ramani, Karthik},
+  booktitle={Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems},
+  pages={3328--3339},
+  year={2017}
+}

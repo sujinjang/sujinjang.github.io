@@ -1,0 +1,9 @@
+@article{villanueva2023advanced,
+  title={Advanced modeling method for quantifying cumulative subjective fatigue in mid-air interaction},
+  author={Villanueva, Ana and Jang, Sujin and Stuerzlinger, Wolfgang and Ambike, Satyajit and Ramani, Karthik},
+  journal={International Journal of Human-Computer Studies},
+  volume={169},
+  pages={102931},
+  year={2023},
+  publisher={Elsevier}
+}

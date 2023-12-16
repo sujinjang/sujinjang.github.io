@@ -1,0 +1,7 @@
+@inproceedings{jang2014gestureanalyzer,
+  title={GestureAnalyzer: visual analytics for pattern analysis of mid-air hand gestures},
+  author={Jang, Sujin and Elmqvist, Niklas and Ramani, Karthik},
+  booktitle={Proceedings of the 2nd ACM symposium on Spatial user interaction},
+  pages={30--39},
+  year={2014}
+}

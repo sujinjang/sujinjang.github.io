@@ -1,0 +1,10 @@
+@article{jang2015motionflow,
+  title={Motionflow: Visual abstraction and aggregation of sequential patterns in human motion tracking data},
+  author={Jang, Sujin and Elmqvist, Niklas and Ramani, Karthik},
+  journal={IEEE transactions on visualization and computer graphics},
+  volume={22},
+  number={1},
+  pages={21--30},
+  year={2015},
+  publisher={IEEE}
+}

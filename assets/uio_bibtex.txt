@@ -1,0 +1,9 @@
+@inproceedings{jang2012experimental,
+  title={Experimental results for moving object structure estimation using an unknown input observer approach},
+  author={Jang, Sujin and Dani, Ashwin P and Crane III, Carl D and Dixon, Warren E},
+  booktitle={Dynamic systems and control conference},
+  volume={45301},
+  pages={597--606},
+  year={2012},
+  organization={American Society of Mechanical Engineers}
+}

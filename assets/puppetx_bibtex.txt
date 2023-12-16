@@ -1,0 +1,7 @@
+@inproceedings{gupta2014puppetx,
+  title={PuppetX: A framework for gestural interactions with user constructed playthings},
+  author={Gupta, Saikat and Jang, Sujin and Ramani, Karthik},
+  booktitle={Proceedings of the 2014 International Working Conference on Advanced Visual Interfaces},
+  pages={73--80},
+  year={2014}
+}

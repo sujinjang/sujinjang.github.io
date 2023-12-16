@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sujin Jang</title>
-<meta name="author" content="장수진" />
-<meta name="generator" content="Org Mode" />
+<title>Sujin's Homepage</title>
+<meta name="author" content="Sujin Jang" />
 <meta name="google-site-verification" content="_nVdOKyv00hCnRzQvi5IDn47T7MspWyhkC0MTBzflVI" />
 <style> 
-
 li{
 list-style-type: none;
 margin-left: 0.0em;
@@ -21,23 +17,13 @@ li::marker {
   padding-left: 0em;
   margin-right: 0em;}
   
-  #content { max-width: 50em; margin: auto; }
-  .title  { text-align: center;
+#content { max-width: 50em; margin: auto; }
+.title  { text-align: center;
              margin-bottom: .2em; }
-  .subtitle { text-align: center;
+.subtitle { text-align: center;
               font-size: medium;
               font-weight: bold;
               margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   .notbold{font-weight:normal}​
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
@@ -65,164 +51,20 @@ li::marker {
     background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="main.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/louisfacun/scholar-icons@master/css/scholar-icons.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
 
 <body>
 <div id="content" class="content">
 <h2 class="title">
-	<img src="assets/profile_sj.jpg" width="130px">
+	<img src="assets/profile_sj.jpg" width="130px" style="margin-left:0.5em">
 	</br>
 	<p style="margin-top:0.0em; color:rgb(0, 0, 0); font-weight:normal; font-size: 1.0em; font-family:Calibri" align="left"><a href="https://sujinjang.github.io/" style="text-decoration: none; color:rgb(0, 0, 0); font-family: Tahoma">
 	<strong>Sujin Jang</strong>, Ph.D.</a>
 	</p>
-	<p style="margin-top:-1.0em; margin-bottom:0.0em; color:rgb(0, 0, 0); font-size: 0.7em; font-family: Courier; font-weight:bold" align="left">
-	AI/Cmputer Vision Researcher @<a href="https://www.sait.samsung.co.kr">SAIT</a>
+	<p style="margin-top:-1.0em; margin-bottom:0.0em; color:rgb(0, 0, 0); font-size: 0.6em; font-family: Tahoma; font-weight:normal" align="left">
+	AI | Computer Vision Researcher @ <a href="https://www.sait.samsung.co.kr">SAIT</a>
 	</p>
 </h2>
 <div class="outline-text-2" id="text-org132476d">
@@ -233,8 +75,8 @@ Before that, I completed my Ph.D. at <a href="https://www.purdue.edu/">Purdue Un
 Throughout my research career, I have actively engaged in diverse areas of study, encompassing machine learning, human-computer interaction, visual analytics, and robotics.
 Currently at <a href="https://www.sait.samsung.co.kr">SAIT</a>, my primary focus is on developing cutting-edge methodologies in self-supervised learning, domain generalization, and cross-modal representation learning for a variety of computer vision tasks within the field of autonomous driving.
 </h4>
-<p style="margin-left:0.0em; margin-top:-1.0em; margin-bottom:0.0em;; color:rgb(0, 0, 0);  font-size: 1.0em; font-family: Courier" align="left">
-	<a href="assets/email.txt">Contact</a>/<a href="https://scholar.google.com/citations?user=JiKV0wUAAAAJ&hl=en">Google Scholar</a>/<a href="https://linkedin.com/in/sujin-jang-7996b354">LinkedIn</a>/<a href="assets/cv_sujin_jang.pdf">CV</a>
+<p style="margin-left:0.0em; margin-top:-1.0em; margin-bottom:0.0em;; color:rgb(0, 0, 0);  font-size: 1.0em; font-family: Calibri" align="left">
+	<a href="mailto:sujin.steve.jang@gmail.com">Contact</a> | <a href="https://scholar.google.com/citations?user=JiKV0wUAAAAJ&hl=en">Google Scholar</a> | <a href="https://linkedin.com/in/sujin-jang-7996b354">LinkedIn</a> | <a href="assets/cv_sujin_jang.pdf">CV</a>
 </p>
 </div>
 </div>
@@ -245,7 +87,10 @@ Publications
 </h2>
 <div class="outline-text-2" id="text-org132476d">
 </br>
-<h4 span style="text-align:left; margin-top:-0.5em; margin-bottom:2.0em; margin-left:0.5em; padding:0; font-weight:bold; font-size:1.0em; font-family:Tahoma">
+<p span style="text-align:left; margin-top:-0.5em; margin-bottom:1.0em; margin-left:0.3em; padding:0; font-weight:normal; font-size:1.0em; font-family:Courier">
+(*:Equal Contributions)
+</p>
+<h4 span style="text-align:left; margin-top:-0.5em; margin-bottom:2.0em; margin-left:0.5em; padding:0; font-weight:bold; font-size:1.0em; font-family:Geneva">
 Journal Articles
 </h4>
 <ul span style="text-align:left; margin-top:-1.5em; margin-left:2.5em; padding:0; font-weight:normal; font-family:Calibri">
@@ -253,13 +98,14 @@ Journal Articles
 		<b>Advanced Modeling Method for Quantifying Cumulative Subjective Fatigue in Mid-Air Interaction</b>
 	</li>
 	<li span style="font-family:Calibri">
-		<b><span class="underline">Sujin Jang</span></b>*, Ana Villanueva*, Wolfgang St&uuml;erzlinger, Satyajit Ambike, Karthik Ramani
+		Ana Villanueva*, <b><span class="underline">Sujin Jang</span></b>*, Wolfgang St&uuml;erzlinger, Satyajit Ambike, Karthik Ramani
 	</li>
 	<li span style="font-family:Calibri">
-		International Journal of Human-Computer Studies (<b>IJHCS</b>), Vol 169, January 2023 (*: Equal Contributions)
+		International Journal of Human-Computer Studies (<b>IJHCS</b>), Vol 169, January 2023
 	</li>
 	<li span style="font-family:Calibri">
 		<a href="https://www.sciencedirect.com/science/article/abs/pii/S1071581922001513">[paper]</a></dd>
+		<a href="assets/tcm_ijhcs_bibtex.txt">[bibtex]</a>
 	</li>
 	</br>
 	<li value="[J1]" span style="text-align:left; margin-top:-0.5em">
@@ -279,9 +125,10 @@ Journal Articles
 		<a href="https://vimeo.com/136206227">[video-30sec]</a>
 		<a href="https://youtu.be/liaWkY4Uxd4">[video-full]</a>
 		<a href="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzdWppbmphbmcxMXxneDoyOWRmNjU2YjJlYjFjYWU3">[slides]</a>
+		<a href="assets/motionflow_bibtex.txt">[bibtex]</a>
 	</li>
 </ul>	
-<h4 span style="text-align:left; margin-top:0.0em; margin-bottom:2.0em; margin-left:0.5em; padding:0; font-weight:bold; font-size:1.0em; font-family:Tahoma">
+<h4 span style="text-align:left; margin-top:0.0em; margin-bottom:2.0em; margin-left:0.5em; padding:0; font-weight:bold; font-size:1.0em; font-family:Geneva">
 Conference Proceedings
 </h4>
 <ul span style="text-align:left; margin-top:-1.5em; margin-left:2.5em; padding:0; font-weight:normal; font-family:Calibri">
@@ -308,7 +155,7 @@ Conference Proceedings
 		<b><span class="underline">Sujin Jang</span></b>*, Dae Ung Jo*, Sung Ju Hwang, Dongwook Lee, Daehyun Ji
 	</li>
 	<li span style="font-family:Calibri">
-		Proceedings of the Conference on Neural Information Processing Systems (<b>NeurIPS</b>, 26.1% acceptance rate), 2023 (*: Equal Contributions)
+		Proceedings of the Conference on Neural Information Processing Systems (<b>NeurIPS</b>, 26.1% acceptance rate), 2023
 	</li>
 	<li span style="font-family:Calibri">
 		<a href="https://openreview.net/pdf?id=Grz2ijKrWI">[paper]</a>
@@ -347,6 +194,7 @@ Conference Proceedings
 		<a href="https://dl.acm.org/doi/abs/10.1145/3025453.3025523">[paper]</a>
 		<a href="assets/CHI17_Presentation.pdf">[slides]</a>
 		<a href="https://github.com/CDesignGitHub/Cumulative-Arm-Fatigue_CHI-2017">[code]</a>
+		<a href="assets/tcm_chi_bibtex.txt">[bibtex]</a>
 	</li>
 	</br>
 	<li value="[C4]" span style="text-align:left; margin-top:-0.5em">
@@ -362,6 +210,7 @@ Conference Proceedings
 		<a href="https://openaccess.thecvf.com/content_iccv_2015/html/Choi_A_Collaborative_Filtering_ICCV_2015_paper.html">[paper]</a>
 		<a href="assets/iccv_2015_hand_pose_estimation_supp.pdf">[supp]</a>
 		<a href="https://www.youtube.com/watch?v=tXswZrMEAgo">[video]</a>
+		<a href="assets/hand_bibtex.txt">[bibtex]</a>
 	</li>
 	</br>
 	<li value="[C3]" span style="text-align:left; margin-top:-0.5em">
@@ -376,6 +225,7 @@ Conference Proceedings
 	<li span style="font-family:Calibri">
 		<a href="https://dl.acm.org/doi/abs/10.1145/2659766.2659772">[paper]</a>
 		<a href="https://www.youtube.com/watch?v=F-8NjnB8Di4">[video]</a>
+		<a href="assets/gestureanalyzer_bibtex.txt">[bibtex]</a>
 	</li>
 	</br>
 	<li value="[C2]" span style="text-align:left; margin-top:-0.5em">
@@ -390,6 +240,7 @@ Conference Proceedings
 	<li span style="font-family:Calibri">
 		<a href="https://dl.acm.org/doi/abs/10.1145/2598153.2598171">[paper]</a>
 		<a href="https://www.youtube.com/watch?v=5MtBOaB1C14">[video]</a>
+		<a href="assets/puppetx_bibtex.txt">[bibtex]</a>
 	</li>
 	</br>
 	<li value="[C1]" span style="text-align:left; margin-top:-0.5em">
@@ -404,9 +255,10 @@ Conference Proceedings
 	<li span style="font-family:Calibri">
 		<a href="https://dl.acm.org/doi/abs/10.1145/2598153.2598171">[paper]</a>
 		<a href="https://www.youtube.com/watch?v=5MtBOaB1C14">[video]</a>
+		<a href="assets/uio_bibtex.txt">[bibtex]</a>
 	</li>
 </ul>	
-<h4 span style="text-align:left; margin-top:0.0em; margin-bottom:2.0em; margin-left:0.5em; padding:0; font-weight:bold; font-size:1.0em; font-family:Tahoma">
+<h4 span style="text-align:left; margin-top:0.0em; margin-bottom:2.0em; margin-left:0.5em; padding:0; font-weight:bold; font-size:1.0em; font-family:Geneva">
 Patents
 </h4>
 <ul span style="text-align:left; margin-top:-1.5em; margin-left:2.5em; padding:0; font-weight:normal; font-family:Calibri">
@@ -414,7 +266,7 @@ Patents
 		<b>Method and Apparatus with Data Labeling</b>
 	</li>
 	<li span style="font-family:Calibri">
-		Jaewoo Lee, Yonggonjong Park, KapJe Sung, <b><span class="underline">Sujin Jang</span></b>
+		Jaewoo Lee, Yonggonjong Park, Kapje Sung, <b><span class="underline">Sujin Jang</span></b>
 	</li>
 	<li span style="font-family:Calibri">
 		US Patent App. 18/109,928, 2023
@@ -456,11 +308,12 @@ Patents
 <h2 style="color:rgb(0, 0, 0); font-family:Tahoma">Professional Experience</h2>
 <div class="outline-text-2" id="text-orgffae3e4">
 </br>
-<h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
+<h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-size:1.0em; font-family:Geneva">
 <b>Samsung Advanced Institute of Technology (SAIT)</b>, Suwon, South Korea
-</br>
-<em>Staff Researcher</em> (Jun. 2020 - Present)
-<ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
+<ul span style="text-align:left; margin-top:0.25em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
+<b><em>Staff Researcher</em></b> (Jun. 2020 - Present)
+</ul>
+<ul span style="text-align:left; margin-top:-1.0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
 	<li value="-">Multi-view 3D vision systems for autonomous driving;</li>
 	<li value="-">Cross-modal representation learning;</li>
 	<li value="-">Unsupervised domain adaptation for visual perception</li>
@@ -469,9 +322,10 @@ Patents
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
 <b>System LSI, Samsung Electronics Co.</b>, Hwaseong, South Korea
-</br>
-<em>Staff Engineer</em> (Jan. 2019 - May 2020)
-<ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
+<ul span style="text-align:left; margin-top:0.25em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
+<b><em>Staff Engineer</em></b> (Jan. 2019 - May 2020)
+</ul>
+<ul span style="text-align:left; margin-top:-1.0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
 	<li value="-">Object detection and semantic segmentation for autonomous driving;</li>
 	<li value="-">Hardware-aware quantization;</li>
 	<li value="-">GPU/NPU compiler for optimal neural network inference</li>
@@ -480,9 +334,10 @@ Patents
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
 <b>Motorola Mobility LLC.</b>, Chicago, IL, USA
-</br>
-<em>Machine Learning Staff Researcher</em> (Jun. 2017 - Dec. 2018)
-<ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
+<ul span style="text-align:left; margin-top:0.25em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
+<b><em>Machine Learning Staff Researcher</em></b> (Jun. 2017 - Dec. 2018)
+</ul>
+<ul span style="text-align:left; margin-top:-1.0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
 	<li value="-">Object detection, semantic segmentation, and hand pose estimation for AR/VR applications;</li>
 	<li value="-">Optimization and acceleration of neural network models for smart mobile devices;</li>
 	<li value="-">Human activity analyses based on various types of wearable sensors;</li>
@@ -501,9 +356,10 @@ Patents
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
 <b>Purdue University</b>, West Lafayette, Indiana, USA
 </br>
-<em>Ph.D., Mechanical Engineering</em> (May 2017)
-</br>
-<ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
+<ul span style="text-align:left; margin-top:0.25em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
+<em><b>Ph.D., Mechanical Engineering</b></em> (May 2017)
+</ul>
+<ul span style="text-align:left; margin-top:-1.0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
 	<li value="-">Advisor: Dr. <a href="https://engineering.purdue.edu/ME/People/ptProfile?resource_id=12331">Karthik Ramani</a></li>
 	<li value="-">Thesis: <a href="https://docs.lib.purdue.edu/dissertations/AAI10284197/">Methods for Analyzing Natural Patterns and Physical Ergonomics of Human Gestures in Mid-Air Interaction</a></li>
 </ul>
@@ -511,10 +367,10 @@ Patents
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
 <b>University of Florida</b>, Gainesville, Florida, USA
-</br>
-<em>M.S., Mechanical Engineering</em> (Aug. 2012)
-</br>
-<ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
+<ul span style="text-align:left; margin-top:0.25em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
+<em><b>M.S., Mechanical Engineering</b></em> (Aug. 2012)
+</ul>
+<ul span style="text-align:left; margin-top:-1.0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
 	<li value="-">Advisor: Dr. <a href="https://mae.ufl.edu/people/profiles/carl-crane/">Carl D. Crane III</a> and Dr. <a href="https://mae.ufl.edu/people/profiles/warren-dixon/">Warren E. Dixon</a></li>
 	<li value="-">Thesis: <a href="https://ufdcimages.uflib.ufl.edu/UF/E0/04/43/59/00001/JANG_S.pdf">Structure Estimation of Moving Objects Using Unknown Input Observers</a></li>
 </ul>
@@ -522,10 +378,10 @@ Patents
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
 <b>Kookmin University</b>, Seoul, South Korea
-</br>
-<em>B.S., Mechanical and Automotive Engineering</em> (Aug. 2010)
-</br>
-<ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
+<ul span style="text-align:left; margin-top:0.25em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
+<em><b>B.S., Mechanical and Automotive Engineering</b></em> (Aug. 2010)
+</ul>
+<ul span style="text-align:left; margin-top:-1.0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
 	<li value="-">Advisor: Dr. <a href="http://kul.kookmin.ac.kr/xe/index.php?mid=professor_kjh">Jungha Kim
 </a></li>
 	<li value="-">Undergraduate Research Assistant, Unmanned Vehicle Lab.</li>
@@ -542,29 +398,26 @@ Honors and Awards</h2>
 </br>
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
-<b>Samsung Best Paper Award</b> (2023)
+<b>Samsung Best Paper Award</b>, Samsung Group
 </br>
 <ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
-	<li value="-">Samsung Group</li>
-	<li value="-"> Awarded Bronze (AI/SW) for "Distortion-aware Domain Adaptation"</li>
+	<li value="-"> Awarded Bronze (AI/SW) for "Distortion-aware Domain Adaptation"  (2023)</li>
 </ul>
 </h4>
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
-<b>Estus H. and Vashti L. Magoon Award for Teaching Excellence</b> (2015)
+<b>Estus H. and Vashti L. Magoon Award for Teaching Excellence</b>, Purdue University
 </br>
 <ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
-	<li value="-">College of Engineering, Purdue University</li>
-	<li value="-">Awarded for excellent teaching in "<a href="https://engineering.purdue.edu/toydesign/wp/">ME444: Computer-Aided Design and Rapid Prototyping</a>"</li>
+	<li value="-">Awarded for excellent teaching in "<a href="https://engineering.purdue.edu/toydesign/wp/">ME444: Computer-Aided Design and Rapid Prototyping</a>" (2015)</li>
 </ul>
 </h4>
 
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Geneva">
-<b>Best Paper in Session Award</b> (2012)
+<b>Best Paper in Session Award</b>, ASME Dynamic Systems and Control Conference
 </br>
 <ul span style="text-align:left; margin-top:0em; margin-left:1.5em; padding:0; font-weight:normal; font-family:Calibri">
-	<li value="-">ASME Dynamic Systems and Control Conference</li>
-	<li value="-">Awarded for "<a href="https://asmedigitalcollection.asme.org/DSCC/proceedings-abstract/DSCC2012-MOVIC2012/597/229148">Experimental Results for Moving Object Structure Estimation using an Unknown Input Observer Approach</a>"</li>
+	<li value="-">Awarded for "<a href="https://asmedigitalcollection.asme.org/DSCC/proceedings-abstract/DSCC2012-MOVIC2012/597/229148">Experimental Results for Moving Object Structure Estimation using an Unknown Input Observer Approach</a>"  (2012)</li>
 </ul>
 </h4>
 
@@ -599,10 +452,6 @@ Honors and Awards</h2>
 </div>
 </div>
 </br>
-<div id="sfckd64jr7gtsj7x95rym85wsx88g4jqxeq" class="content" align="middle"></div>
-<script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=kd64jr7gtsj7x95rym85wsx88g4jqxeq&down=async" async></script>
-<noscript><a href="https://www.freecounterstat.com" title="web page counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=kd64jr7gtsj7x95rym85wsx88g4jqxeq" border="0" title="web page counter" alt="web page counter"></a></noscript>
-
 </div>
 </body>
 </html>
