@@ -529,7 +529,26 @@ Honors and Awards</h2>
 </ul>
 </div>
 </div>
-</br>
+
+<hr width="100%" size="0" color="gray">
+
+<ul span style="margin-top:1.0em; margin-left:0.0em; padding:0; font-weight:small; font-family:Calibri">
+<a title="free world map tracker" href="https://smallcounter.com/vmap/1727614325/">
+<img title="free world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1727614325" border="0" alt="world map hits counter" width="120" height="60" /></a>
+</ul>
+<p style="font-weight:normal; font-family:Calibri; margin-top: -1.0em">Last updated: <span id="last-updated"></span></p>
+<script>
+	// Get the last modified date of the HTML document
+	const lastModified = new Date(document.lastModified);
+	
+	// Format it to only display the date in English (e.g., September 29, 2024)
+	const options = { year: 'numeric', month: 'long', day: 'numeric' };
+	const formattedDate = lastModified.toLocaleDateString('en-US', options);
+	
+	// Display the formatted date
+	document.getElementById("last-updated").innerText = formattedDate;
+</script>
+
 </div>
 </body>
 </html>
