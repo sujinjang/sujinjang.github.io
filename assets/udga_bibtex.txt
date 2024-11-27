@@ -1,0 +1,8 @@
+@inproceedings{
+chang2024unified,
+title={Unified Domain Generalization and Adaptation for Multi-View 3D Object Detection},
+author={Gyusam Chang and Jiwon Lee and Donghyun Kim and Jinkyu Kim and Dongwook Lee and Daehyun Ji and Sujin Jang and Sangpil Kim},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=lxuXvJSOcP}
+}

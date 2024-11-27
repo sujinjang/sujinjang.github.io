@@ -1,0 +1,8 @@
+@inproceedings{
+kim2024unveiling,
+title={Unveiling the Hidden: Online Vectorized {HD} Map Construction with Clip-Level Token Interaction and Propagation},
+author={Nayeon Kim and Hongje Seong and Daehyun Ji and Sujin Jang},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=z4eVwH484M}
+}
