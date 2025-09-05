@@ -7,6 +7,35 @@
 <meta name="author" content="Sujin Jang" />
 <meta name="google-site-verification" content="_nVdOKyv00hCnRzQvi5IDn47T7MspWyhkC0MTBzflVI" />
 <style> 
+.paper-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    margin-left: auto;   /* 가운데 정렬 */
+    margin-right: auto;  /* 가운데 정렬 */
+    padding-left: 0;
+    max-width: 1200px;    /* 전체 최대 너비 제한 */
+  }
+.paper-item img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+  /* 모바일 화면에서 이미지 줄이기 */
+@media (max-width: 600px) {
+    .paper-item {
+      flex-direction: column; /* 이미지 위, 텍스트 아래 */
+      align-items: flex-start;
+    }
+    .paper-item img {
+      width: 100%;       /* 모바일에서는 폭에 맞게 */
+      max-width: 320px;  /* 너무 크지 않도록 제한 */
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+}
+
 li{
 list-style-type: none;
 margin-left: 0.0em;
@@ -21,7 +50,7 @@ li::marker {
      text-decoration: underline;
 	 # font-weight: bold;}
 
-#content { max-width: 50em; margin: auto; }
+#content { max-width: 900px; margin: auto; }
 .title  { text-align: center;
              margin-bottom: .2em; }
 .subtitle { text-align: center;
@@ -100,10 +129,9 @@ Academic Publications
 C=Conference, J=Journal, P=Pre-print, &lowast;: Eequal contributions, &dagger;: Corresponding authors
 </p>
 <ul span style="text-align:left; margin-top:1.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri">
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/damvla_2026.png" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/damvla_2026.png" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -113,10 +141,9 @@ C=Conference, J=Journal, P=Pre-print, &lowast;: Eequal contributions, &dagger;: 
 	</li>
 	</br>
 
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/moe_2026.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/moe_2026.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -127,10 +154,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/tta_2025.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/tta_2025.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -140,10 +166,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/dg_2025.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/dg_2025.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -153,10 +178,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/dimcol_2025.png" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/dimcol_2025.png" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -166,10 +190,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/vln_2025.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/vln_2025.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -180,10 +203,10 @@ Lee, Daehyun Ji, Chao Zhang
 		</div>
 	</li>
 	</br>
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/protoocc_2025.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/protoocc_2025.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -196,10 +219,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/unveiler_2024.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/unveiler_2024.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -213,10 +235,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/udga_2024.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/udga_2024.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -231,10 +252,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/cmda_2024.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/cmda_2024.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -251,10 +271,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/stxd_2023.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/stxd_2023.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -269,10 +288,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/ijhcs_2023.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/ijhcs_2023.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -285,10 +303,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/dada_2022.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/dada_2022.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -304,10 +321,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/tcm_2017.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/tcm_2017.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -322,10 +338,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/motionflow_2016.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/motionflow_2016.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -341,10 +356,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/hand_2015.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/hand_2015.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -359,10 +373,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/gestureanalyzer_2014.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/gestureanalyzer_2014.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -376,10 +389,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/puppetx_2014.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/puppetx_2014.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
@@ -393,10 +405,9 @@ Lee, Daehyun Ji, Chao Zhang
 	</li>
 	</br>
 	
-	<li style="display:flex; align-items:flex-start; margin-bottom:1em; margin-left:0; padding-left:0;">
+	<li class="paper-item">
 		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/uio_2012.PNG" alt="C1 Paper Image" 
-		   style="width:250px; height:auto; margin-right:10px;">
+		<img src="assets/teaser/uio_2012.PNG" alt="C1 Paper Image">
 
 		<!-- 오른쪽 텍스트 -->
 		<div style="font-family:Calibri;">
