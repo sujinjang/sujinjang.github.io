@@ -1,0 +1,71 @@
+<li class="paper-item">
+  <!-- Teaser image -->
+  {% if entry.image %}
+  <img src="assets/teaser/{{ entry.image }}" alt="{{ entry.title }} teaser">
+  {% elsif entry.preview %}
+  <img src="assets/teaser/{{ entry.preview }}" alt="{{ entry.title }} teaser">
+  {% endif %}
+  
+  <!-- Publication details -->
+  <div style="font-family:Calibri;">
+    [{{ entry.tag }}] <span class="bold_txt">{{ entry.title }}</span><br>
+    
+    <!-- Authors with highlighting -->
+    {% assign authors = entry.author_array -%}
+    {%- for author in authors -%}
+      {%- assign last_clean = author.last | remove: "†" | remove: "*" | strip -%}
+      {%- if last_clean == "Jang" and author.first contains "Sujin" -%}
+        <span class="sj-author">{{ author.first }} {{ author.last }}</span>
+      {%- else -%}
+        {{ author.first }} {{ author.last }}
+      {%- endif -%}
+      {%- if forloop.last == false -%}, {% endif -%}
+    {%- endfor -%}
+    <br>
+    
+    <!-- Venue information -->
+    {% if entry.type == "conference" %}
+      {% if entry.venue == "CHI" %}
+        Proceedings of the ACM Conference on Human Factors in Computing Systems
+      {% elsif entry.venue == "ICCV" %}
+        Proceedings of theIEEE International Conference on Computer Vision
+      {% elsif entry.venue == "CVPR" %}
+        Proceedings of the Conference on Computer Vision and Pattern Recognition
+      {% elsif entry.venue == "NeurIPS" %}
+        Proceedings of the Conference on Neural Information Processing Systems
+      {% elsif entry.venue == "ICML" %}
+        Proceedings of the International Conference on Machine Learning
+      {% elsif entry.venue == "AAAI" %}
+        Proceedings of the AAAI Conference on Artificial Intelligence
+      {% elsif entry.venue == "SUI" %}
+        Proceedings of theACM Symposium on Spatial User Interaction
+      {% elsif entry.venue == "AVI" %}
+        Proceedings of the ACM Conference on Advanced Visual Interfaces
+      {% elsif entry.venue == "DSCC" %}
+        Proceedings of the ASME Dynamic Systems and Control Conference
+      {% elsif entry.booktitle %}
+        {{ entry.booktitle }}
+      {% endif %}
+      {%- if entry.venue -%} (<b>{{ entry.venue }}</b>{% if entry.acceptance %}, {{ entry.acceptance }} acceptance rate{% endif %}{% if entry.presentation %}-{{ entry.presentation }}{% endif %}){%- endif -%}
+    {% elsif entry.type == "journal" %}
+      {{ entry.journal }} (<b>{{ entry.venue }}</b>)
+    {% elsif entry.booktitle %}
+      {{ entry.booktitle }}
+      {%- if entry.venue -%} (<b>{{ entry.venue }}</b>){%- endif -%}
+    {% endif %}
+    {%- if entry.type == "preprint" -%}<b>Preprint</b>{%- else -%}, {{ entry.year }}{%- endif -%}
+    {% if entry.award %}<br><b>{{ entry.award }}</b>{% endif %}
+    <br>
+    
+    <!-- Links -->
+    {% if entry.pdf %}<a href="{{ entry.pdf }}">[paper]</a>{% endif %}
+    {% if entry.arxiv %}<a href="{{ entry.arxiv }}">[arXiv]</a>{% endif %}
+    {% if entry.website %}<a href="{{ entry.website }}">[project_page]</a>{% endif %}
+    {% if entry.supp %}<a href="{{ entry.supp }}">[supp]</a>{% endif %}
+    {% if entry.slides %}<a href="{{ entry.slides }}">[slides]</a>{% endif %}
+    {% if entry.poster %}<a href="{{ entry.poster }}">[poster]</a>{% endif %}
+    {% if entry.video %}<a href="{{ entry.video }}">[video]</a>{% endif %}
+    {% if entry.code %}<a href="{{ entry.code }}">[code]</a>{% endif %}
+  </div>
+</li>
+<br>

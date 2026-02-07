@@ -1,0 +1,58 @@
+# Site settings
+title: "Sujin Jang"
+description: "Academic Homepage"
+url: "https://sujinjang.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Jekyll Scholar settings
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography
+  bibliography: publications.bib
+  bibliography_template: bibtemplate
+  
+  # Sort by year (descending) and then by month
+  sort_by: year, month
+  order: descending
+  
+  # Disable grouping
+  group_by: none
+  
+  # Hide type section headings
+  type_names: { 'article': '', 'inproceedings': '' }
+  type_order: ['article', 'inproceedings']
+  
+  # Repository settings for PDF links
+  repository: assets
+  
+  # BibTeX keys that should be replaced
+  replace_strings: true
+  
+  # Details link
+  details_dir: bibliography
+  details_layout: details.html
+  details_permalink: /bibliography/:key.html
+  
+  # Generate bibliography page
+  bibliography_list_tag: ul
+  bibliography_item_tag: li
+
+# Plugins
+plugins:
+  - jekyll-scholar
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Include files
+include:
+  - _pages

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ page.title | default: site.title }}</title>
+<meta name="author" content="Sujin Jang" />
+<meta name="google-site-verification" content="_nVdOKyv00hCnRzQvi5IDn47T7MspWyhkC0MTBzflVI" />
+<style>
+#text-org132476d {
+  border-top: 1.5px solid #999;
+}
+.paper-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+    max-width: 750px;
+  }
+.paper-item img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+@media (max-width: 600px) {
+    .paper-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .paper-item img {
+      width: 100%;
+      max-width: 320px;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+}
+
+li{
+list-style-type: none;
+margin-left: 0.0em;
+}
+
+li.list {
+	line-height:1.0em;
+	margin-bottom: 0.5em;
+}
+
+li::marker {
+  content: attr(value)" ";
+  padding-left: 0em;
+  margin-right: 0em;}
+  
+.sj-author {
+     text-decoration: underline;
+	 font-weight: bold;}
+	 
+.bold_txt {
+	text-decoration: none; color:rgb(50, 50, 50);
+	font-weight: bold
+}
+
+#content { max-width: 700px; margin: auto; }
+.title  { text-align: center;
+             margin-bottom: -0.2em;
+			border-bottom: 1.5px solid #999;
+			position: relative;}
+.subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .underline { text-decoration: underline; }
+  .notbold{font-weight:normal}​
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+
+.collapsible-header {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.collapsible-header::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.5em;
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+}
+
+.collapsible-header.active::before {
+  transform: rotate(90deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-content.active {
+  max-height: 2000px;
+}
+
+.nav-dropdown {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #808080;
+  color: white;
+  padding: 8px 12px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.dropdown-button:hover {
+  background-color: #696969;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Calibri;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.go-up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #808080;
+  color: white;
+  padding: 8px 12px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: none;
+  line-height: 1;
+}
+
+.go-up-button:hover {
+  background-color: #696969;
+}
+
+.go-up-button.show {
+  display: block;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="{{ '/main.css' | relative_url }}" />
+</head>
+<body style="margin-left:1.0em; margin-right:1.0em">
+{{ content }}
+<button class="go-up-button" id="goUpBtn" onclick="scrollToTop()" title="Go to top">↑</button>
+<script>
+function toggleCollapsible(element) {
+  element.classList.toggle('active');
+  const content = element.nextElementSibling;
+  content.classList.toggle('active');
+}
+
+function scrollToSection(sectionId) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleDropdown() {
+  document.getElementById('dropdownMenu').classList.toggle('show');
+}
+
+// Show/hide go-up button based on scroll position
+window.onscroll = function() {
+  const goUpBtn = document.getElementById('goUpBtn');
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    goUpBtn.classList.add('show');
+  } else {
+    goUpBtn.classList.remove('show');
+  }
+};
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-button')) {
+    const dropdowns = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>

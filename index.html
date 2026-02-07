@@ -1,122 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" xml:lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sujin's Homepage</title>
-<meta name="author" content="Sujin Jang" />
-<meta name="google-site-verification" content="_nVdOKyv00hCnRzQvi5IDn47T7MspWyhkC0MTBzflVI" />
-<style>
-#text-org132476d {
-  border-top: 1.5px solid #999;
-}
-.paper-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1em;
-    margin-left: auto;   /* 가운데 정렬 */
-    margin-right: auto;  /* 가운데 정렬 */
-    padding-left: 0;
-    max-width: 1200px;    /* 전체 최대 너비 제한 */
-  }
-.paper-item img {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    margin-right: 10px;
-  }
-  /* 모바일 화면에서 이미지 줄이기 */
-@media (max-width: 600px) {
-    .paper-item {
-      flex-direction: column; /* 이미지 위, 텍스트 아래 */
-      align-items: flex-start;
-    }
-    .paper-item img {
-      width: 100%;       /* 모바일에서는 폭에 맞게 */
-      max-width: 320px;  /* 너무 크지 않도록 제한 */
-      margin-right: 0;
-      margin-bottom: 8px;
-    }
-}
+---
+layout: default
+title: "Sujin's Homepage"
+---
 
-li{
-list-style-type: none;
-margin-left: 0.0em;
-}
-
-li.list {
-	line-height:1.0em;
-	margin-bottom: 0.5em;
-}
-
-li::marker {
-  content: attr(value)" ";
-  padding-left: 0em;
-  margin-right: 0em;}
-  
-.sj-author {
-     text-decoration: underline;
-	 font-weight: bold;}
-	 
-.bold_txt {
-	text-decoration: none; color:rgb(50, 50, 50);
-	font-weight: bold
-}
-
-#content { max-width: 900px; margin: auto; }
-.title  { text-align: center;
-             margin-bottom: -0.2em;
-			border-bottom: 1.5px solid #999;}
-.subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .underline { text-decoration: underline; }
-  .notbold{font-weight:normal}​
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-</style>
-<link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-
-<body style="margin-left:1.0em; margin-right:1.0em">
 <div id="content" class="content">
-<h2 class="title">
-	<img src="assets/profile_sj.jpg" width="130px" style="margin-left:0.5em">
-	</br>
-	<p style="margin-top:0.0em; color:rgb(0, 0, 0); font-weight:normal; font-size: 1.0em; font-family:Calibri" align="left"><a href="https://sujinj.com/" style="text-decoration: none; color:rgb(70, 70, 70); font-family: Tahoma">
-	<strong>Sujin Jang</strong>, Ph.D.</a>
-	</p>
-	<p style="margin-top:-1.0em; margin-bottom:0.0em; color:rgb(0, 0, 0); font-size: 0.7em; font-family: Courier; font-weight:normal" align="left">
-	AI|Robotics Researcher
-	</p>
+<h2 class="title" style="display: flex; align-items: center; gap: 0.5em;">
+	<img src="assets/profile_sj.jpg" width="150px" style="flex-shrink: 0;">
+	<div style="flex-grow: 1;">
+		<p style="margin-top:0.0em; margin-bottom:0.3em; color:rgb(0, 0, 0); font-weight:normal; font-size: 1.2em; font-family:Calibri" align="left"><a href="https://sujinj.com/" style="text-decoration: none; color:rgb(70, 70, 70); font-family: Tahoma">
+		<strong>Sujin Jang</strong></a>
+		</p>
+		<p style="margin-top:0.0em; margin-bottom:0.0em; color:rgb(0, 0, 0); font-size: 0.7em; font-family: Courier; font-weight:normal" align="left">
+		Associate Professor
+		<br>
+		<a href="https://www.hpi-lab.org">Human-centered Physical Intelligence (HPI) Lab
+		<br>
+		<a href="http://aix.hanyang.ac.kr/">Department of Artificial Intelligence</a>
+		<br>
+		<a href="http://computing.hanyang.ac.kr/">College of Computing</a>
+		<br>
+		<a href="https://www.hanyang.ac.kr/web/eng">Hanyang University ERICA</a>
+		<br>		
+		</p>
+	</div>
+	<div class="nav-dropdown">
+	  <div class="dropdown">
+	    <button class="dropdown-button" onclick="toggleDropdown()">☰</button>
+	    <div class="dropdown-content" id="dropdownMenu">
+	      <a href="#publications" onclick="scrollToSection('publications'); return false;">Academic Publications</a>
+	      <a href="#experience" onclick="scrollToSection('experience'); return false;">Professional Experience</a>
+	      <a href="#education" onclick="scrollToSection('education'); return false;">Education</a>
+	      <a href="#awards" onclick="scrollToSection('awards'); return false;">Honors and Awards</a>
+	      <a href="#patents" onclick="scrollToSection('patents'); return false;">Patents</a>
+	      <a href="#service" onclick="scrollToSection('service'); return false;">Academic Service</a>
+	    </div>
+	  </div>
+	</div>
 </h2>
 <h4 span style="text-align:left; margin-top:1.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri">
-Hello! I am a Principal Researcher at Samsung AI Center (ex-<a href="https://www.sait.samsung.co.kr/">SAIT AI Research Center</a>) in Suwon, South Korea.
-Previously, I worked as a Machine Learning Researcher at <a href="https://www.motorola.com/us/">Motorola Mobility LLC</a> in Chicago, IL.
+Hello! I am an Associate Professor at <a href="http://aix.hanyang.ac.kr/">the Department of Artificial Intelligence</a> of <a href="https://www.hanyang.ac.kr/web/eng">Hanyang University ERICA</a> and the director of <a href="https://www.hpi-lab.org">the Human-centered Physical Intelligence (HPI) Lab</a>, where we focus on developing human-centered physical AI agents that can perceive, act, and interact in the real world, enabling intelligent systems to provide safe and beneficial services to humans and society.
+Previously, I was a Principal Researcher at Samsung AI Center (ex-<a href="https://www.sait.samsung.co.kr/">SAIT AI Research Center</a>) in Suwon, South Korea and a Machine Learning Researcher at <a href="https://www.motorola.com/us/">Motorola Mobility LLC</a> in Chicago, IL, USA.
 Before that, I completed my Ph.D. at <a href="https://www.purdue.edu/">Purdue University</a> under the guidance of Dr. <a href="https://engineering.purdue.edu/ME/People/ptProfile?resource_id=12331">Karthik Ramani</a>, where I explored interactions among humans, robots, and machine learning models, focusing on user-driven machine learning
 [J1,C3,C4], gestural user interfaces [C2], and biomechanical analysis of gestural interactions [J2,C5].
 More recently, my focus has shifted toward advancing multi-modal 3D scene understanding [C7-C11], cross-modal representation learning [C7,C8], and addressing domain shift problems
@@ -126,314 +49,116 @@ of physical AI agents capable of solving complex real-world problems, such as au
 </br>
 </h4>
 <p style="margin-left:0.0em; margin-top:-1.0em; margin-bottom:0.0em;; color:rgb(0, 0, 0);  font-size: 1.0em; font-family: Calibri" align="left">
-	<a href="assets/contact.txt">Contact</a> | <a href="https://scholar.google.com/citations?hl=en&user=JiKV0wUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> | <a href="https://linkedin.com/in/sujin-jang-7996b354">LinkedIn</a> | <a href="assets/cv_sujin_jang.pdf">CV</a>
+	<a href="mailto:sujinj@hanyang.ac.kr">Contact</a> | <a href="https://scholar.google.com/citations?hl=en&user=JiKV0wUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> | <a href="https://linkedin.com/in/sujin-jang-7996b354">LinkedIn</a> | <a href="assets/cv_sujin_jang.pdf">CV</a>
 </p>
 </div>
 
 <div id="content" class="content">
-<h2 style="color:rgb(70, 70, 70); font-family: Tahoma"> Academic Publications</h2>
+<h2 id="publications" style="color:rgb(70, 70, 70); font-family: Tahoma"> Academic Publications</h2>
 <div class="outline-text-2" id="text-org132476d">
 <p span style="margin-top:0.0em; margin-left:0.5em; font-weight:normal; font-family:Calibri">
-(C=Conference, J=Journal, P=Pre-print, &lowast;: Eequal contributions, &dagger;: Corresponding authors)
+(C=Conference, J=Journal, P=Preprint, &lowast;: Equal contributions, &dagger;: Corresponding authors)
 </p>
-<ul span style="text-align:left; margin-top:1.0em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.25em">
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/damvla_2026.png" alt="C1 Paper Image">
 
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[P4] <span class="bold_txt">DAM-VLA: VLM-based Dynamic Action Model for Robot Manipulation</span><br>
-		Xiongfeng Peng, Jiaqian Yu, Yamin Mao, Yi Zhou, Chao Zhang, Weiming Li, <span class="sj-author">Sujin Jang</span>, Dongwook Lee, Daehyun Ji
-		</div>
-	</li>
-	<br>
-
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/moe_2026.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[P3] <span class="bold_txt">MoSE: Skill-by-Skill Mixture-of-Experts Learning for Embodied Autonomous Machines</span><br>
-		Lu Xu, Jiaqian Yu, Xiongfeng Peng, Yiwei Chen, Weiming Li, Jaewook Yoo, Sunghyun Chung, <span class="sj-author">Sujin Jang</span>, Dongwook
-Lee, Daehyun Ji, Chao Zhang
-		</div>
-	</li>
-	<br>
-
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/dg_2025.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[P2] <span class="bold_txt">Cross-Modal Domain Generalization for Multi-View 3D Object Detection</span><br>
-		Gyusam Chang, Jiwon Lee, <span class="sj-author">Sujin Jang</span>, Jinkyu Kim, Dongwook Lee, Daehyun Ji, Wonjeong Ryoo, Sangpil Kim
-		</div>
-	</li>
-	<br>
-
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/dimcol_2025.png" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[P1] <span class="bold_txt">Understanding Dimensional Collapse in Cross-Modal Feature Distillation</span><br>
-		Dae Ung Jo<sup>&lowast;</sup>, <span class="sj-author">Sujin Jang</span><sup>&lowast;</sup>, Jay Heo, Sung Ju Hwang
-		</div>
-	</li>
-	<br>
-
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/tta_2025.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C13] <span class="bold_txt">Active Test-time Vision-Language Navigation</span><br>
-		Heeju Ko, Sungjune Kim, Gyeongrok Oh, Jeongyoon Yoon, Honglak Lee, <span class="sj-author">Sujin Jang</span>, Seungryong Kim, Sangpil Kim  <br>
-		Conference on Neural Information Processing Systems (<b>NeurIPS</b>, 24.5% acceptance rate), 2025 <br>
-		<a href="https://arxiv.org/abs/2506.06630">[arXiv]</a>
-		</div>
-	</li>
-	<br>
-
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/vln_2025.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C12] <span class="bold_txt">Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning</span><br>
-		Sungjune Kim<sup>&lowast;</sup>, Gyeongrok Oh<sup>&lowast;</sup>, Heeju Ko, Daehyun Ji, Dongwook Lee, Byung-Jun Lee, <span class="sj-author">Sujin Jang</span><sup>&dagger;</sup>, Sangpil Kim<sup>&dagger;</sup> <br>
-		International Conference on Machine Learning (<b>ICML</b>, 26.9% acceptance rate), 2025 <br>
-		<a href="https://openreview.net/pdf?id=K4GaB4fdIq">[paper]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/protoocc_2025.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C11] <span class="bold_txt">3D Occupancy Prediction with Low-Resolution Queries via Prototype-aware View Transformation</span><br>
-		Gyeongrok Oh<sup>&lowast;</sup>, Sungjune Kim<sup>&lowast;</sup>, Heeju Ko, Hyung-gun Chi, Jinkyu Kim, Dongwook Lee, Daehyun Ji, Sungjoon Choi, <span class="sj-author">Sujin Jang</span><sup>&dagger;</sup>, Sangpil Kim<sup>&dagger;</sup> <br>
-		Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, 22.1% acceptance rate), 2025 <br>
-		<a href="https://arxiv.org/abs/2503.15185">[paper]</a>
-		<a href="https://kuai-lab.github.io/cvpr2025protoocc/">[project_page]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/unveiler_2024.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C10] <span class="bold_txt">Unveiling the Hidden: Online Vectorized HD Map Construction with Clip-Level Token Interaction and Propagation</span><br>
-		Nayeon Kim<sup>&lowast;</sup>, Hongje Seong<sup>&lowast;</sup>, Daehyun Ji, <span class="sj-author">Sujin Jang</span><sup>&dagger;</sup> <br>
-		Conference on Neural Information Processing Systems (<b>NeurIPS</b>, 25.8% acceptance rate), 2024 <br>
-		<a href="https://arxiv.org/abs/2411.11002">[paper]</a>
-		<a href="https://mapunveiler.github.io/">[project_page]</a>
-		<a href="assets/mapunveiler_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/udga_2024.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C9] <span class="bold_txt">Unified Domain Generalization and Adaptation for Multi-View 3D Object Detection</span><br>
-		Gyusam Chang<sup>&lowast;</sup>, Jiwon Lee<sup>&lowast;</sup>, Donghyun Kim, Jinkyu Kim, Dongwook Lee, Daehyun Ji, <span class="sj-author">Sujin Jang</span><sup>&dagger;</sup>, Sangpil Kim<sup>&dagger;</sup> <br>
-		Conference on Neural Information Processing Systems (<b>NeurIPS</b>, 25.8% acceptance rate), 2024 <br>
-		<a href="https://arxiv.org/abs/2410.22461v1">[paper]</a>
-		<a href="https://kuai-lab.github.io/neurips2024udga/">[project_page]</a>
-		<a href="https://github.com/SAITPublic/UDGA/tree/master">[code]</a>
-		<a href="assets/udga_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/cmda_2024.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C8] <span class="bold_txt">CMDA: Cross-Modal and Domain Adversarial Adaptation for LiDAR-based 3D Object Detection</span><br>
-		Gyusam Chang<sup>&lowast;</sup>, Wonweok Roh<sup>&lowast;</sup>, <span class="sj-author">Sujin Jang</span>, Dongwook Lee, Daehyun Ji, Gyeongrok Oh, Jinsun Park, Jinkyu Kim, Sangpil Kim <br>
-		AAAI Conference on Artificial Intelligence (<b>AAAI</b>, 23.7% acceptance rate), 2024 <br>
-		<a href="https://ojs.aaai.org/index.php/AAAI/article/view/27857">[paper]</a>
-		<a href="https://arxiv.org/abs/2403.03721">[arXiv]</a>
-		<a href="assets/cmda_supp.pdf">[supp]</a>
-		<a href="https://underline.io/lecture/93553-cmda-cross-modal-and-domain-adversarial-adaptation-for-lidar-based-3d-object-detection">[video]</a>
-		<a href="assets/cmda_poster.pdf">[poster]</a>
-		<a href="assets/cmda_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/stxd_2023.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C7] <span class="bold_txt">STXD: Structural and Temporal Cross-Modal Distillation for Multi-View 3D Object Detection</span><br>
-		<span class="sj-author">Sujin Jang</span><sup>&lowast;</sup>, Dae Ung Jo<sup>&lowast;</sup>, Sung Ju Hwang, Dongwook Lee, Daehyun Ji <br>
-		Conference on Neural Information Processing Systems (<b>NeurIPS</b>, 26.1% acceptance rate), 2023 <br>
-		<a href="https://openreview.net/pdf?id=Grz2ijKrWI">[paper]</a>
-		<a href="assets/stxd_neurips_slides.pdf">[slides]</a>
-		<a href="assets/stxd_neurips_poster.png">[poster]</a>
-		<a href="assets/stxd_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/ijhcs_2023.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[J2] <span class="bold_txt">Advanced Modeling Method for Quantifying Cumulative Subjective Fatigue in Mid-Air Interaction</span><br>
-		Ana Villanueva<sup>&lowast;</sup>, <span class="sj-author">Sujin Jang</span><sup>&lowast;</sup>, Wolfgang St&uuml;erzlinger, Satyajit Ambike, Karthik Ramani <br>
-		International Journal of Human-Computer Studies (<b>IJHCS</b>), Vol 169, 2023 <br>
-		<a href="https://www.sciencedirect.com/science/article/abs/pii/S1071581922001513">[paper]</a></dd>
-		<a href="assets/tcm_ijhcs_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/dada_2022.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C6] <span class="bold_txt">DaDA: Distortion-aware Domain Adaptation for Unsupervised Semantic Segmentation</span><br>
-		<span class="sj-author">Sujin Jang</span>, Joohan Na, Dokwan Oh <br>
-		Conference on Neural Information Processing Systems (<b>NeurIPS-Oral</b>, 184/2665~6.9%), 2022 <br>
-		<a href="https://openreview.net/pdf?id=6RoAxmwj0L2">[paper]</a>
-		<a href="https://sait-fdd.github.io/">[project_page]</a>
-		<a href="assets/dada_neurips_slides.pdf">[slides]</a>
-		<a href="assets/dada_neurips_poster.png">[poster]</a>
-		<a href="assets/dada_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/tcm_2017.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C5] <span class="bold_txt">Modeling Cumulative Arm Fatigue in Mid-Air Interaction based on Perceived Exertion and Kinetics of Arm Motion</span><br>
-		<span class="sj-author">Sujin Jang</span>, Wolfgang St&uuml;erzlinger, Satyajit Ambike, Karthik Ramanii<br>
-		ACM Conference on Human Factors in Computing Systems (<b>CHI</b>, 25% acceptance rate), 2017 <br>
-		<a href="https://dl.acm.org/doi/abs/10.1145/3025453.3025523">[paper]</a>
-		<a href="assets/CHI17_Presentation.pdf">[slides]</a>
-		<a href="https://github.com/CDesignGitHub/Cumulative-Arm-Fatigue_CHI-2017">[code]</a>
-		<a href="assets/tcm_chi_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/motionflow_2016.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[J1] <span class="bold_txt">MotionFlow: Visual Abstraction and Aggregation of Sequential Patterns in Human Motion Tracking Data</span><br>
-		<span class="sj-author">Sujin Jang</span>, Niklas Elmqvist, Karthik Ramani<br>
-		IEEE Transaction on Visualization and Computer Graphics (<b>TVCG</b>), Vol 22. no.1, 2016, *Presented at IEEE Conference on Visual Analytics Science & Technology (<b>VAST</b>, 22% acceptance rate), 2015 <br>
-		<a href="https://ieeexplore.ieee.org/abstract/document/7194831/">[paper]</a>
-		<a href="https://vimeo.com/136206227">[video-30sec]</a>
-		<a href="https://youtu.be/liaWkY4Uxd4">[video-full]</a>
-		<a href="assets/IEEEVIS15_VAST_MotionFlow.pdf">[slides]</a>
-		<a href="assets/motionflow_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/hand_2015.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C4] <span class="bold_txt">A Collaborative Filtering Approach to Real-Time Hand Pose Estimation</span><br>
-		Chiho Choi, Ayan Sinha, Joon Hee Choi, <span class="sj-author">Sujin Jang</span>, Karthik Ramani<br>
-		IEEE International Conference on Computer Vision (<b>ICCV</b>), 2015 <br>
-		<a href="https://openaccess.thecvf.com/content_iccv_2015/html/Choi_A_Collaborative_Filtering_ICCV_2015_paper.html">[paper]</a>
-		<a href="assets/iccv_2015_hand_pose_estimation_supp.pdf">[supp]</a>
-		<a href="https://www.youtube.com/watch?v=tXswZrMEAgo">[video]</a>
-		<a href="assets/hand_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/gestureanalyzer_2014.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C3] <span class="bold_txt">GestureAnalyzer: Visual Analytics for Pattern Analysis of Mid-Air Hand Gestures</span><br>
-		<span class="sj-author">Sujin Jang</span>, Niklas Elmqvist, Karthik Ramani <br>
-		ACM Symposium on Spatial User Interaction (<b>SUI</b>, 29% acceptance rate), 2014 <br>
-		<a href="https://dl.acm.org/doi/abs/10.1145/2659766.2659772">[paper]</a>
-		<a href="https://www.youtube.com/watch?v=F-8NjnB8Di4">[video]</a>
-		<a href="assets/gestureanalyzer_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/puppetx_2014.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C2] <span class="bold_txt">PuppetX: A Framework for Gestural Interactions With User Constructed Playthings</span><br>
-		Saikat Gupta, <span class="sj-author">Sujin Jang</span>, Karthik Ramani <br>
-		ACM Conference on Advanced Visual Interfaces (<b>AVI</b>, 28% acceptance rate), 2014 <br>
-			<a href="https://dl.acm.org/doi/abs/10.1145/2598153.2598171">[paper]</a>
-			<a href="https://www.youtube.com/watch?v=5MtBOaB1C14">[video]</a>
-			<a href="assets/puppetx_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
-	<br>
-	
-	<li class="paper-item">
-		<!-- 왼쪽 이미지 -->
-		<img src="assets/teaser/uio_2012.PNG" alt="C1 Paper Image">
-
-		<!-- 오른쪽 텍스트 -->
-		<div style="font-family:Calibri;">
-		[C1] <span class="bold_txt">Experimental Results for Moving Object Structure Estimation using an Unknown Input Observer Approach</span><br>
-		<span class="sj-author">Sujin Jang</span>, Ashwin Dani, Carl Crane, Warren Dixon <br>
-		ASME Dynamic Systems and Control Conference (<b>DSCC, Best Paper in Session Award</b>), 2012 <br>
-			<a href="https://asmedigitalcollection.asme.org/DSCC/proceedings-abstract/DSCC2012-MOVIC2012/597/229148">[paper]</a>
-			<a href="https://www.youtube.com/watch?v=Lf9OFqTrsBQ">[video1]</a>
-			<a href="https://www.youtube.com/watch?v=J2PUK37_94g">[video2]</a>
-			<a href="assets/uio_bibtex.txt">[bibtex]</a>
-		</div>
-	</li>
+<!-- Generate publications from BibTeX -->
+<ul span style="text-align:left; margin-top:1.0em; margin-left:-2.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.25em">
+{% bibliography %}
 </ul>
 </div>
 
-<h2 style="color:rgb(70, 70, 70); font-family:Tahoma">Patents</h2>
+<!-- Rest of the content: Patents, Experience, Education, etc. -->
+<h2 id="experience" style="color:rgb(70, 70, 70); font-family:Tahoma">Professional Experience</h2>
+<div class="outline-text-2" id="text-org132476d">
+</br>
+<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+		<li class="list"; value="&compfn;"><span class="bold_txt">Hanyang University ERICA</span>, Ansan, South Korea</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+				<li span class="list"; value="&sdot;">
+					<span class="bold_txt"><em>Associate Professor</em></span>, Department of Artificial Intelligence, College of Computing (Mar. 2026 - Current)
+				</li>
+			</ul>
+		
+        <li class="list"; value="&compfn;"><span class="bold_txt">Samsung AI Center</span>, Suwon, South Korea</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+				<li span class="list"; value="&sdot;">
+					<span class="bold_txt"><em>Principal Researcher (Task Leader)</em></span>, Autonomous Machine Intelligence Team (Dec. 2024 - Feb. 2026)
+				</li>
+			</ul>
+
+		<li class="list"; value="&compfn;"><span class="bold_txt">Samsung Advanced Institute of Technology (SAIT)</span>, Suwon, South Korea</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+				<li span class="list"; value="&sdot;">
+					<span class="bold_txt"><em>Staff</em> &rarr; <em>Principal Researcher</em></span>, Autonomous Driving Team (Jan. 2019 - Dec. 2024)
+				</li>
+			</ul>
+
+		<li class="list"; value="&compfn;"><span class="bold_txt">Motorola Mobility LLC.</span>, Chicago, IL, USA</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>Machine Learning Staff Researcher</em></span>, Device+Machine Learning Team (Jun. 2017 - Dec. 2018)</li>
+			</ul>
+	</ul>
+</h4>
+</div>
+
+<h2 id="education" style="color:rgb(70, 70, 70); font-family:Tahoma">Education</h2>
+<div class="outline-text-2" id="text-org132476d">
+</br>
+<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Purdue University</span>, West Lafayette, Indiana, USA</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>Ph.D., Mechanical Engineering</em></span> (Aug. 2017)</li>
+				<ul span style="text-align:left; margin-top:-0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+					<li span class="list"; value="-">Specialization: Human-Computer Interaction; Machine Learning; Robotics</li>
+					<li span class="list"; value="-">Advisor: <a href="https://engineering.purdue.edu/ME/People/ptProfile?resource_id=12331">Karthik Ramani</a></li>
+					<li span class="list"; value="-">Thesis: <a href="https://docs.lib.purdue.edu/dissertations/AAI10284197/">Methods for Analyzing Natural Patterns and Physical Ergonomics of Human Gestures in Mid-Air Interaction</a></li>
+				</ul>
+			</ul>
+
+		<li span class="list"; value="&compfn;"><span class="bold_txt">University of Florida</span>, Gainesville, Florida, USA</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.5em">
+				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>M.S., Mechanical Engineering</em></span> (Aug. 2012)</li>
+				<ul span style="text-align:left; margin-top:-0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+					<li span class="list"; value="-">Specialization: Controls; Robotics; Machine Learning</li>
+					<li span class="list"; value="-">Advisor: <a href="https://mae.ufl.edu/people/profiles/carl-crane/">Carl D. Crane III</a> and <a href="https://mae.ufl.edu/people/profiles/warren-dixon/">Warren E. Dixon</a></li>
+					<li span class="list"; value="-">Thesis: <a href="https://ufdcimages.uflib.ufl.edu/UF/E0/04/43/59/00001/JANG_S.pdf">Experimental Demonstration of Structure Estimation of Moving Objects Using Unknown Input Observers</a></li>
+				</ul>
+			</ul>
+
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Kookmin University</span>, Seoul, South Korea</li>
+			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>B.S., Mechanical and Automotive Engineering</em></span> (Aug. 2010)</li>
+				<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+					<li span class="list"; value="-">Undergraduate Research Assistant, Unmanned Vehicle Lab.</li>
+					<li span class="list"; value="-">Advisor: <a href="https://auto.kookmin.ac.kr/about/research/research_uvl">Jungha Kim</a></li>
+				</ul>
+			</ul>
+	</ul>
+</h4>
+</div>
+
+<h2 id="awards" style="color:rgb(70, 70, 70); font-family:Tahoma">Honors and Awards</h2>
+<div class="outline-text-2" id="text-org132476d">
+<br>
+<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height: 1.0em;">
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Samsung Best Paper Award</span> for "Distortion-aware Domain Adaptation" (AI/SW), Samsung Group, 2023</li>
+		<li span class="list"; value="&compfn;"><span class="bold_txt">NeurIPS Oral Presentation</span> (Top 6.9% of Submissions), Neural Information Processing Systems, 2022</li>
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Boundless Search for Breakthroughs Award</span> for "Autonomous Driving", SAIT, Samsung Electronics, 2022</li>
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Device+ Team Excellence Award</span> for "AR Vertical Healthcare", Lenovo, 2018</li>
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Estus H. and Vashti L. Magoon
+		Award for Teaching Excellence</span>, Purdue University, 2015</li>
+			<ul span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri;">
+				<li span class="list"; value="&sdot;"><em>Awarded for excellent teaching in "<a href="https://engineering.purdue.edu/toydesign/wp/">ME444: Toy Design</a>"</em></li>
+			</ul>
+		
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Best Paper in Session Award</span>, ASME Dynamic Systems and Control Conference, 2012</li>
+	</ul>
+</h4>
+</div>
+
+<h2 id="patents" style="color:rgb(70, 70, 70); font-family:Tahoma">Patents</h2>
 <div class="outline-text-2" id="text-org132476d">
 </br>
 <h4 span style="text-align:left; margin-top:-0.5em; margin-left:0.5em; padding:0; font-weight:normal; font-family:Calibri">
@@ -475,97 +200,13 @@ Lee, Daehyun Ji, Chao Zhang
 </h4>
 </div>
 
-<h2 style="color:rgb(70, 70, 70); font-family:Tahoma">Professional Experience</h2>
-<div class="outline-text-2" id="text-org132476d">
-</br>
-<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
-	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-		<li class="list"; value="&compfn;"><span class="bold_txt">Samsung AI Center</span>, Suwon, South Korea</li>
-			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-				<li span class="list"; value="&sdot;">
-					<span class="bold_txt"><em>Principal Researcher (Task Leader)</em></span>, Autonomous Machine Intelligence Team (Dec. 2024 - Present)
-				</li>
-			</ul>
-		<br>
-		<li class="list"; value="&compfn;"><span class="bold_txt">Samsung Advanced Institute of Technology (SAIT)</span>, Suwon, South Korea</li>
-			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-				<li span class="list"; value="&sdot;">
-					<span class="bold_txt"><em>Staff</em> &rarr; <em>Principal Researcher</em></span>, Autonomous Driving Team (Jan. 2019 - Dec. 2024)
-				</li>
-			</ul>
-		<br>
-		<li class="list"; value="&compfn;"><span class="bold_txt">Motorola Mobility LLC.</span>, Chicago, IL, USA</li>
-			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>Machine Learning Staff Researcher</em></span>, Device+Machine Learning Team (Jun. 2017 - Dec. 2018)</li>
-			</ul>
-	</ul>
-</h4>
-</div>
-
-<h2 style="color:rgb(70, 70, 70); font-family:Tahoma">Education</h2>
-<div class="outline-text-2" id="text-org132476d">
-</br>
-<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
-	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Purdue University</span>, West Lafayette, Indiana, USA</li>
-			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>Ph.D., Mechanical Engineering</em></span> (Aug. 2017)</li>
-				<ul span style="text-align:left; margin-top:-0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
-					<li span class="list"; value="-">Specialization: Human-Computer Interaction; Machine Learning; Robotics</li>
-					<li span class="list"; value="-">Advisor: <a href="https://engineering.purdue.edu/ME/People/ptProfile?resource_id=12331">Karthik Ramani</a></li>
-					<li span class="list"; value="-">Thesis: <a href="https://docs.lib.purdue.edu/dissertations/AAI10284197/">Methods for Analyzing Natural Patterns and Physical Ergonomics of Human Gestures in Mid-Air Interaction</a></li>
-				</ul>
-			</ul>
-		<br>
-		<li span class="list"; value="&compfn;"><span class="bold_txt">University of Florida</span>, Gainesville, Florida, USA</li>
-			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.5em">
-				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>M.S., Mechanical Engineering</em></span> (Aug. 2012)</li>
-				<ul span style="text-align:left; margin-top:-0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
-					<li span class="list"; value="-">Specialization: Controls; Robotics; Machine Learning</li>
-					<li span class="list"; value="-">Advisor: <a href="https://mae.ufl.edu/people/profiles/carl-crane/">Carl D. Crane III</a> and <a href="https://mae.ufl.edu/people/profiles/warren-dixon/">Warren E. Dixon</a></li>
-					<li span class="list"; value="-">Thesis: <a href="https://ufdcimages.uflib.ufl.edu/UF/E0/04/43/59/00001/JANG_S.pdf">Experimental Demonstration of Structure Estimation of Moving Objects Using Unknown Input Observers</a></li>
-				</ul>
-			</ul>
-		<br>
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Kookmin University</span>, Seoul, South Korea</li>
-			<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
-				<li span class="list"; value="&sdot;"><span class="bold_txt"><em>B.S., Mechanical and Automotive Engineering</em></span> (Aug. 2010)</li>
-				<ul span style="text-align:left; margin-top:0.0em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
-					<li span class="list"; value="-">Undergraduate Research Assistant, Unmanned Vehicle Lab.</li>
-					<li span class="list"; value="-">Advisor: <a href="https://auto.kookmin.ac.kr/about/research/research_uvl">Jungha Kim</a></li>
-				</ul>
-			</ul>
-	</ul>
-</h4>
-</div>
-
-<h2 style="color:rgb(70, 70, 70); font-family:Tahoma">Honors and Awards</h2>
-<div class="outline-text-2" id="text-org132476d">
-<br>
-<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
-	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height: 1.0em;">
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Samsung Best Paper Award</span> for "Distortion-aware Domain Adaptation" (AI/SW), Samsung Group, 2023</li>
-		<li span class="list"; value="&compfn;"><span class="bold_txt">NeurIPS Oral Presentation</span> (Top 6.9% of Submissions), Neural Information Processing Systems, 2022</li>
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Boundless Search for Breakthroughs Award</span> for "Autonomous Driving", SAIT, Samsung Electronics, 2022</li>
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Device+ Team Excellence Award</span> for "AR Vertical Healthcare", Lenovo, 2018</li>
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Estus H. and Vashti L. Magoon
-		Award for Teaching Excellence</span>, Purdue University, 2015</li>
-			<ul span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri;">
-				<li span class="list"; value="&sdot;"><em>Awarded for excellent teaching in "<a href="https://engineering.purdue.edu/toydesign/wp/">ME444: Toy Design</a>"</em></li>
-			</ul>
-		
-		<li span class="list"; value="&compfn;"><span class="bold_txt">Best Paper in Session Award</span>, ASME Dynamic Systems and Control Conference, 2012</li>
-	</ul>
-</h4>
-</div>
-
-<h2 style="color:rgb(70, 70, 70); font-family:Tahoma">Academic Service</h2>
+<h2 id="service" style="color:rgb(70, 70, 70); font-family:Tahoma">Academic Service</h2>
 <div class="outline-text-2" id="text-org132476d">
 <h4 span style="text-align:left; margin-top:1.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri">
 	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.5em; padding:0.0em; font-weight:normal; font-family:Calibri; display: inline-block; line-height:1.0em">
 		<li span class="list">[CVPR] Reviewer, IEEE Conference on Computer Vision and Pattern Recognition (2023,2024,2025,2026)</li>
 		<li span class="list">[ICCV] Reviewer, CVF/IEEE International Conference on Computer Vision (2025)</li>
-		<li span class="list">[ECCV] Reviewer, European Conference on Computer Vision (2024)</li>
+		<li span class="list">[ECCV] Reviewer, European Conference on Computer Vision (2024,2026)</li>
 		<li span class="list">[WACV] Reviewer, IEEE/CVF Winter Conference on Applications of Computer Vision (2026)</li>
 		<li span class="list">[NeurIPS] Reviewer, Conference on Neural Information Processing Systems (2025)</li>		
 		<li span class="list">[ICLR] Reviewer, International Conference on Learning Representations (2026)</li>
@@ -595,18 +236,10 @@ Lee, Daehyun Ji, Chao Zhang
 <hr style="margin-top: 0.0em" width="100%" size="0" color="lightgray">
 <p style="font-size:1.0em; color:grey; font-family:Calibri; margin-left: 0.0em; margin-top: 0.0em">Last updated: <span id="last-updated"></span></p>
 <script>
-	// Get the last modified date of the HTML document
 	const lastModified = new Date(document.lastModified);
-	
-	// Format it to only display the date in English (e.g., September 29, 2024)
 	const options = { year: 'numeric', month: 'long'};
 	const formattedDate = lastModified.toLocaleDateString('en-US', options);
-	
-	// Display the formatted date
 	document.getElementById("last-updated").innerText = formattedDate;
 </script>
 
 </div>
-
-</body>
-</html>

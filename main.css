@@ -15,6 +15,11 @@ h2 {
     padding-bottom: 4px;
 }
 
+/* Hide bibliography subsection headings */
+h2.bibliography {
+    display: none;
+}
+
 dd {
     padding-bottom: 10px;
 }

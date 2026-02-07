@@ -3,3 +3,8 @@ body {
     font-weight: 300;
     line-height: 1.35;
 }
+
+/* Hide bibliography subsection headings (Journal Articles, Conference Articles) */
+h2.bibliography {
+    display: none;
+}
