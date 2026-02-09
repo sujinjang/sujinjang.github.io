@@ -1,0 +1,22 @@
+<li class="patent-item" id="{{ entry.tag }}">
+  <div style="font-family:Calibri;">
+    [{{ entry.tag }}] <span class="bold_txt">{{ entry.title }}</span>
+    <br>
+    
+    <!-- Authors -->
+    {% assign authors = entry.author_array -%}
+    {%- for author in authors -%}
+      {%- assign last_clean = author.last | remove: "†" | remove: "*" | strip -%}
+      {%- if last_clean == "Jang" and author.first contains "Sujin" -%}
+        <span class="sj-author">{{ author.first }} {{ author.last }}</span>
+      {%- else -%}
+        {{ author.first }} {{ author.last }}
+      {%- endif -%}
+      {%- if forloop.last == false -%}, {% endif -%}
+    {%- endfor -%}
+    <br>
+    
+    <!-- Patent details -->
+    {{ entry.note }}, {{ entry.year }}
+  </div>
+</li>
