@@ -1,0 +1,21 @@
+<h2 id="patents" style="color:rgb(70, 70, 70); font-family:Tahoma">Patents</h2>
+<div class="outline-text-2" id="text-org132476d">
+</br>
+<h4 span style="text-align:left; margin-top:-0.5em; margin-left:1.0em; padding:0; font-weight:normal; font-family:Calibri">
+	<ul span style="text-align:left; margin-top:0.0em; margin-left:0.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em">
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Granted</span>
+			<ul span style="text-align:left; margin-top:-0.5em; margin-left:-2.5em; margin-bottom:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em" class="patent-list">
+				{% bibliography --file patents.bib --query @*[status=granted] --template patenttemplate %}
+			</ul>
+		</li>
+		<li span class="list"; value="&compfn;"><span class="bold_txt">Published & Pending</span>
+			<ul span style="text-align:left; margin-top:-0.5em; margin-left:-2.5em; margin-bottom:1.0em; padding:0; font-weight:normal; font-family:Calibri; line-height:1.0em" class="patent-list" id="pendingPatentList">
+				{% bibliography --file patents.bib --query @*[status=pending] --template patenttemplate %}
+			</ul>
+			<li span class="patent-list" id="patentFoldToggle" style="cursor: pointer; display: none; align-items: center; gap: 0.1em; margin-left: 0.0em; margin-top: -0.0em; margin-bottom: 0.5em;" onclick="togglePatentMore()">
+				<span id="patentFoldSymbol" style="font-size: 0.9em; font-weight: bold;">[+]</span> More
+			</li>
+		</li>
+	</ul>
+</h4>
+</div>

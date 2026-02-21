@@ -57,6 +57,19 @@ li.list-compact {
 	margin-bottom: -0.25em;
 }
 
+#pendingPatentList li.patent-item,
+#patentMoreContent li.patent-item {
+  margin-top: 0;
+  margin-bottom: -0.25em;
+  line-height: 1.0em;
+}
+
+#pendingPatentList li.patent-item > div,
+#patentMoreContent li.patent-item > div {
+  margin: 0;
+  line-height: 1.0em;
+}
+
 li::marker {
   content: attr(value)" ";
   padding-left: 0em;
@@ -140,8 +153,10 @@ li::marker {
 .nav-dropdown {
   position: fixed;
   top: 10px;
-  right: 20px;
+  right: max(1em, calc((100vw - 700px) / 2));
   z-index: 1000;
+  --dropdown-icon-alpha: 0.6;
+  --dropdown-menu-alpha: 0.7;
 }
 
 .dropdown {
@@ -150,7 +165,7 @@ li::marker {
 }
 
 .dropdown-button {
-  background-color: #808080;
+  background-color: rgba(128, 128, 128, var(--dropdown-icon-alpha));
   color: white;
   padding: 8px 12px;
   font-size: 20px;
@@ -161,14 +176,14 @@ li::marker {
 }
 
 .dropdown-button:hover {
-  background-color: #696969;
+  background-color: rgba(105, 105, 105, var(--dropdown-icon-alpha));
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   right: 0;
-  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, var(--dropdown-menu-alpha));
   min-width: 220px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1001;
@@ -195,11 +210,12 @@ li::marker {
 }
 
 .go-up-button {
+  --go-up-alpha: 0.6;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: max(1em, calc((100vw - 700px) / 2));
   z-index: 1000;
-  background-color: #808080;
+  background-color: rgba(128, 128, 128, var(--go-up-alpha));
   color: white;
   padding: 8px 12px;
   font-size: 20px;
@@ -211,7 +227,7 @@ li::marker {
 }
 
 .go-up-button:hover {
-  background-color: #696969;
+  background-color: rgba(105, 105, 105, var(--go-up-alpha));
 }
 
 .go-up-button.show {

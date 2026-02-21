@@ -1,0 +1,94 @@
+<hr style="margin-top: 0.0em" width="100%" size="0" color="lightgray">
+<p style="font-size:1.0em; color:grey; font-family:Calibri; margin-left: 0.0em; margin-top: 0.0em">Last updated: <span id="last-updated"></span></p>
+<script>
+	const lastModified = new Date(document.lastModified);
+	const options = { year: 'numeric', month: 'long'};
+	const formattedDate = lastModified.toLocaleDateString('en-US', options);
+	document.getElementById("last-updated").innerText = formattedDate;
+	let patentFoldExpanded = false;
+
+	function getPatentNumber(item) {
+		const patentId = (item.id || '').trim();
+		let match = patentId.match(/^P\[?(\d+)\]?$/i);
+		if (match) {
+			return Number(match[1]);
+		}
+
+		const text = (item.textContent || '').trim();
+		match = text.match(/^\[\s*P\s*(\d+)\s*\]/i);
+		if (match) {
+			return Number(match[1]);
+		}
+
+		return null;
+	}
+
+	function initializePatentFold() {
+		const pendingList = document.getElementById('pendingPatentList');
+		const toggle = document.getElementById('patentFoldToggle');
+		if (!pendingList || !toggle) {
+			return;
+		}
+
+		const items = Array.from(pendingList.querySelectorAll('li.patent-item'));
+		let hiddenCount = 0;
+		let firstFoldedItem = null;
+
+		for (let i = 0; i < items.length; i++) {
+			const patentNumber = getPatentNumber(items[i]);
+			if (patentNumber !== null && patentNumber <= 7) {
+				if (!firstFoldedItem) {
+					firstFoldedItem = items[i];
+				}
+				items[i].style.display = 'none';
+				items[i].setAttribute('data-folded', 'true');
+				hiddenCount += 1;
+			}
+		}
+
+		if (hiddenCount > 0) {
+			if (firstFoldedItem) {
+				const foldedParent = firstFoldedItem.parentElement;
+				if (foldedParent) {
+					foldedParent.insertBefore(toggle, firstFoldedItem);
+				}
+			}
+			toggle.style.display = 'flex';
+			toggle.style.marginBottom = '0.0em';
+			pendingList.style.marginBottom = '-5.0em';
+		}
+	}
+
+	function togglePatentMore() {
+		const pendingList = document.getElementById('pendingPatentList');
+		const symbol = document.getElementById('patentFoldSymbol');
+		const toggle = document.getElementById('patentFoldToggle');
+		if (!pendingList || !symbol || !toggle) {
+			return;
+		}
+		const foldedItems = pendingList.querySelectorAll('li.patent-item[data-folded="true"]');
+		patentFoldExpanded = !patentFoldExpanded;
+
+		for (let i = 0; i < foldedItems.length; i++) {
+			foldedItems[i].style.display = patentFoldExpanded ? 'list-item' : 'none';
+		}
+
+		symbol.innerText = patentFoldExpanded ? '[-]' : '[+]';
+		toggle.style.marginBottom = patentFoldExpanded ? '0.5em' : '0.0em';
+		pendingList.style.marginBottom = patentFoldExpanded ? '1.0em' : '-5.0em';
+	}
+
+	initializePatentFold();
+
+	function toggleServiceMore() {
+		const content = document.getElementById('serviceMoreContent');
+		const toggle = document.getElementById('serviceToggle');
+		if (content.style.display === 'none') {
+			content.style.display = 'inline-block';
+			toggle.innerText = '[-]';
+		} else {
+			content.style.display = 'none';
+			toggle.innerText = '[+]';
+		}
+	}
+</script>
