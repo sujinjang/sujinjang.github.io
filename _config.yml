@@ -24,8 +24,8 @@ scholar:
   group_by: none
   
   # Hide type section headings
-  type_names: { 'article': '', 'inproceedings': '' }
-  type_order: ['article', 'inproceedings']
+  type_names: { 'article': '', 'inproceedings': '', 'preprint': '', 'conference': '', 'journal': '' }
+  type_order: ['article', 'inproceedings', 'preprint', 'conference', 'journal']
   
   # Repository settings for PDF links
   repository: assets

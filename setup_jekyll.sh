@@ -21,6 +21,12 @@ if ! command -v bundle &> /dev/null; then
     gem install bundler
 fi
 
+# Install Ruby stdlib gems required by Jekyll
+if ! gem list -i '^base64$' -v '0.3.0' > /dev/null 2>&1; then
+    echo "Installing base64 gem dependency..."
+    gem install base64
+fi
+
 # Install dependencies
 echo "Installing Jekyll and dependencies..."
 bundle install
