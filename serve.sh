@@ -23,4 +23,17 @@ fi
 bundle check >/dev/null 2>&1 || bundle install
 
 echo "Starting Jekyll development server..."
-bundle exec jekyll serve --host=127.0.0.1 --port=4000
+# Start Jekyll server in background
+bundle exec jekyll serve --host=127.0.0.1 --port=4000 &
+SERVER_PID=$!
+
+# Wait for server to start and open browser
+sleep 3
+if command -v explorer.exe >/dev/null 2>&1; then
+  explorer.exe "http://localhost:4000/" 2>/dev/null
+elif command -v xdg-open >/dev/null 2>&1; then
+  xdg-open "http://localhost:4000/" 2>/dev/null
+fi
+
+# Keep the server running
+wait $SERVER_PID
